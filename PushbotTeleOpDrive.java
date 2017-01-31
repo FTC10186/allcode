@@ -1,23 +1,17 @@
 /*
 Copyright (c) 2016 Robert Atkinson
-
 All rights reserved.
-
 Redistribution and use in source and binary forms, with or without modification,
 are permitted (subject to the limitations in the disclaimer below) provided that
 the following conditions are met:
-
 Redistributions of source code must retain the above copyright notice, this list
 of conditions and the following disclaimer.
-
 Redistributions in binary form must reproduce the above copyright notice, this
 list of conditions and the following disclaimer in the documentation and/or
 other materials provided with the distribution.
-
 Neither the name of Robert Atkinson nor the names of his contributors may be used to
 endorse or promote products derived from this software without specific prior
 written permission.
-
 NO EXPRESS OR IMPLIED LICENSES TO ANY PARTY'S PATENT RIGHTS ARE GRANTED BY THIS
 LICENSE. THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
 "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,
@@ -80,7 +74,7 @@ public class PushbotTeleOpDrive extends OpMode{
         left = -gamepad1.left_stick_y;
         right = -gamepad1.right_stick_x;
         /*robot.leftMotor.setPower(left);
-        robot.rightMotor.setPower(right);*/
+          robot.rightMotor.setPower(right);*/
 
         if(left < DEAD_ZONE && left > DEAD_ZONE_LOWER) {
             left = 0;
@@ -113,6 +107,7 @@ public class PushbotTeleOpDrive extends OpMode{
 
 
         // Run arm and winch motors (note: The joystick goes negative when pushed forwards, so negate it)
+        /*****
         left = -gamepad2.left_stick_y;
         right = -gamepad2.right_stick_x;
 
@@ -145,8 +140,8 @@ public class PushbotTeleOpDrive extends OpMode{
         }
 
         telemetry.addData("left",  "%.2f",  left);
+    }*/
     }
-
 
 
 

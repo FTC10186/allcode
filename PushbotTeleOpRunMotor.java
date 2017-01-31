@@ -33,10 +33,8 @@ public class PushbotTeleOpRunMotor extends OpMode {
 
 
     public void loop() {
-        robot.armMotor.setPower(1);
-        robot.leftMotor.setPower(1);
-        robot.rightMotor.setPower(1);
+        //robot.rightMotor.setPower(1);
+        //robot.leftMotor.setPower(1);
+        robot.catapult.setPosition(0);
     }
 }
-
-

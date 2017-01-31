@@ -28,7 +28,7 @@ public class HardwarePushbot
     public DcMotor  rightMotor  = null;
     public DcMotor  armMotor    = null;
     public DcMotor  winchMotor  = null;
-    //public Servo  leftClaw    = null;
+    public Servo  catapult    = null;
     //public Servo    rightClaw   = null;
 
     public static final double MID_SERVO       =  0.5 ;
@@ -52,8 +52,9 @@ public class HardwarePushbot
         // Define and Initialize Motors
         leftMotor   = hwMap.dcMotor.get("left_drive");
         rightMotor  = hwMap.dcMotor.get("right_drive");
-        armMotor    = hwMap.dcMotor.get("left_arm");
-        winchMotor = hwMap.dcMotor.get("right_arm");
+        catapult    = hwMap.servo.get("catapult");
+        armMotor    = hwMap.dcMotor.get("arm_motor");
+        //winchMotor = hwMap.dcMotor.get("right_arm");
         leftMotor.setDirection(DcMotor.Direction.FORWARD); // Set to REVERSE if using AndyMark motors
         rightMotor.setDirection(DcMotor.Direction.REVERSE);// Set to FORWARD if using AndyMark motors
 
@@ -102,4 +103,3 @@ public class HardwarePushbot
         period.reset();
     }
 }
-
